@@ -33,7 +33,7 @@ class ContactControler extends \Framework\Controller\Abstracts\BaseControler {
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
             $mail->Username = 'nobloko80@gmail.com';
-            $mail->Password = 'headshot';
+            $mail->Password = '';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port = 465;
 
