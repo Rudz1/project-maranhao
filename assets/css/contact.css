@@ -1,0 +1,26 @@
+h1 {
+    margin-bottom: 40px
+}
+
+
+#contact{
+    background-color: #f1f1f1f1;
+}
+
+#contact.dark-mode{
+    background-color: rgb(19, 18, 18);
+    transition: 2s;
+}
+
+label {
+    color: rgb(75, 67, 67)
+}
+
+.btn-send {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    width: 80%;
+    margin-left: 3px
+}
+

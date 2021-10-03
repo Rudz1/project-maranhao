@@ -1,0 +1,19 @@
+/* 
+    Created on : 28 de ago de 2021, 16:33:43
+    Author     : andre
+*/
+
+.img-small{
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.admin-content{
+    padding: 20px 0;
+    min-height: 300px;
+}
+
+#admin-data{
+    margin-top: 50px
+}
+

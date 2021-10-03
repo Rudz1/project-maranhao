@@ -1,0 +1,70 @@
+
+* {
+  box-sizing: border-box;
+}
+
+
+.container {
+ position: static;
+}
+
+
+.mySlides {
+  display: none;
+}
+
+.mySlides img{
+
+  display: block;
+  width: 100%;
+  height: 400px;
+}
+
+
+.cursor {
+  cursor: pointer;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: static;
+  top: 0;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+
+.row img{
+  width: 100%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+.column img{
+  height: 100px;
+}
+
+.demo{
+  opacity: 0.5;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
