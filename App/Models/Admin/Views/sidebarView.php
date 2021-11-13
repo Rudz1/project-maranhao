@@ -43,6 +43,15 @@
                 </li>
             </ul>
         </li>
+        <li>
+            <a href="#pageFooter" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Footer</a>
+            <ul class="collapse list-unstyled" id="pageFooter">
+                <li>
+                    <a href="<?php echo App\Config\Config::url('/admin/footer-contact-table') ?>">Contact</a>
+                </li>
+
+            </ul>
+        </li>
     </ul>
     
      <ul class="list-unstyled CTAs">

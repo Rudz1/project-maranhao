@@ -10,7 +10,7 @@ namespace App\Config;
 class Config {
     static $BASE_URL = 'http://localhost/';
     static $UPLOAD_DIR = 'assets/upload';
-    static $UPLOAD_IMAGE_ALLWED_EXTENSIONS = ['jpg', 'jpeg', 'png', 'gif'];
+    static $UPLOAD_IMAGE_ALLWED_EXTENSIONS = ['jpg', 'jpeg', 'png', 'gif', 'svg'];
     
     public static  function url(string $uri=''){
         return rtrim(self::$BASE_URL, '/').'/'.ltrim($uri, '/');

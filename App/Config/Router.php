@@ -80,6 +80,11 @@ class Router{
         $router->post('/admin/culture-content-edit-save', \App\Models\CultureContent\Controllers\Admin\AdminController::class, 'edit');
         $router->get('/admin/culture-content-delete', \App\Models\CultureContent\Controllers\Admin\AdminController::class, 'delete');
        
+        //router - admin - footer - contact
+        $router->get('/admin/footer-contact-table', \App\Models\FooterContact\Controllers\Admin\AdminController::class, 'list');
+        $router->get('/admin/footer-contact-edit-form', \App\Models\FooterContact\Controllers\Admin\AdminController::class, 'editForm');
+        $router->post('/admin/footer-contact-edit-save', \App\Models\FooterContact\Controllers\Admin\AdminController::class, 'edit');
+   
     }
 
 }

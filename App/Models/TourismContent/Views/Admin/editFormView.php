@@ -3,15 +3,15 @@
 
     <div class="form-group">
         <label>Titulo</label>
-        <input class="form-control" type="text" placeholder="<?php echo $contents->getTitle() ?>" name="title">
+        <input class="form-control" type="text" value="<?php echo $contents->getTitle() ?>" name="title">
     </div> 
     <div class="form-group">
         <label>Texto</label>
-        <textarea class="form-control" name="text" rows="5" cols="10"></textarea>
+        <textarea class="form-control" name="text"><?php echo $contents->getText() ?></textarea>
     </div> 
     <div class="form-group">
         <label>Link do Video</label>
-        <input class="form-control" type="text" placeholder="Pegue o link direto do iframe do YouTube" name="link">
+        <input class="form-control" type="text" value="<?php echo $contents->getLink() ?>" name="link">
     </div> 
     
     <div class="form-group">

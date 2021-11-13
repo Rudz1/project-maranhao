@@ -1,11 +1,13 @@
 <header class="container-fluid">  
     <div id="top" class="row d-flex align-items-center">
+         <?php foreach (\App\Models\FooterContact\Controllers\Admin\AdminController::contact() as $contact) { ?>
         <div class="col-xl-4  mb-2 d-flex justify-content-center">
-            <a  class="bi bi-whatsapp"href="https://web.whatsapp.com/" target="_blank">(99)98105-1777</a>  
+            <a  class="bi bi-whatsapp"href="https://web.whatsapp.com/" target="_blank"><?php echo $contact->getTelephone() ?></a>  
         </div>
         <div class="col-xl-4 mb-2 d-flex justify-content-center">
-            <a class="bi bi-envelope-fill"href="https://mail.google.com/" target="_blank"> andrelpsdev@gmail.com</a>
-        </div>    
+            <a class="bi bi-envelope-fill"href="https://mail.google.com/" target="_blank"><?php echo $contact->getEmail() ?></a>
+        </div> 
+         <?php } ?>
         <div  id="mobile-buttons" class="col-xl-4 mb-2 d-flex justify-content-center ">
             <button class="btn btn-outline-secondary" onclick="fontBigger()" id="">A+</button>
             <button class="btn btn-outline-secondary" onclick="fontLower()" id="">A-</button>

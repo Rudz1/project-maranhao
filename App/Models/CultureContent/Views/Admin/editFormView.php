@@ -3,7 +3,7 @@
 
     <div class="form-group">
         <label>Titulo</label>
-        <input class="form-control" type="text" placeholder="<?php echo $contents->getTitle() ?>" name="title">
+        <input class="form-control" type="text" value="<?php echo $contents->getTitle() ?>" name="title">
     </div>
     
     <div class="form-group">
@@ -12,7 +12,7 @@
  
     <div class="form-group">
         <label>Texto</label>
-        <textarea class="form-control" name="text" rows="5" cols="10"></textarea>
+        <textarea class="form-control" name="text" rows="5" cols="10"><?php echo $contents->getText() ?></textarea>
     </div> 
     
     <div class="form-group">

@@ -52,13 +52,13 @@
             <a href="/">Home</a>
           </p>
           <p>
-            <a href="./views/pontos-turisticos.html">Pontos Turisticos</a>
+            <a href="<?php echo \App\Config\Config::url('/tourist-hotspots')?>">Pontos Turisticos</a>
           </p>
           <p>
-            <a href="./views/cultura.html">Cultura</a>
+            <a href="><?php echo \App\Config\Config::url('/culture')?>">Cultura</a>
           </p>
           <p>
-            <a href="./views/contato.html">Contato</a>
+            <a href="<?php echo  \App\Config\Config::url('/contact')?>">Contato</a>
           </p>
 
         </div>
@@ -76,16 +76,17 @@
 
           <h6 class="text-uppercase font-weight-bold">Contato</h6>
           <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <?php foreach (\App\Models\FooterContact\Controllers\Admin\AdminController::contact() as $contact) { ?>
           <p>
-            <i class="bi bi-house-door mr-3"></i> Porto Franco, Tv.Tocantins 253, MA
+              <i class="bi bi-house-door mr-3"></i> <?php echo $contact->getAddress() ?>
           </p>
           <p>
-            <i class="bi bi-envelope mr-3"></i> andrelpsdev@gmail.com
+            <i class="bi bi-envelope mr-3"></i> <?php echo $contact->getEmail() ?>
           </p>
           <p>
-            <i class="bi bi-phone mr-3"></i> (99) 98105-1777
+            <i class="bi bi-phone mr-3"></i> <?php echo $contact->getTelephone() ?>
           </p>
-
+          <?php } ?>
         </div>
 
       </div>

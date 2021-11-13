@@ -77,7 +77,7 @@ class Repository implements IRepository {
             throw new \Exception($this->con->error);
         }
         while ($resource = $result->fetch_object()){
-            $resources[] = new \App\Models\HomeLogo\Entities\HomeLogo((int)$resource->logo_id, $resource->logo_image_uri);;
+            $resources[] = new \App\Models\HomeLogo\Entities\HomeLogo((int)$resource->logo_id, $resource->logo_image_uri);
         }
         
         return $resources;

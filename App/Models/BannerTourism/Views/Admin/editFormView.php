@@ -6,7 +6,7 @@
     </div> 
     <div class="form-group">
         <label>Nome do Local</label>
-        <input class="form-control" type="text" placeholder="<?php echo $banners->getPlaceName() ?>" name="place_name">
+        <input class="form-control" type="text" value="<?php echo $banners->getPlaceName() ?>" name="place_name">
     </div> 
     
     <div class="form-group">
