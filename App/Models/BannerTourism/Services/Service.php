@@ -18,7 +18,7 @@ class Service implements IService{
     public function add(\App\Models\Upload\Services\IService $uploadService, string $bannerName, string $bannerPath, string $placeName): \App\Models\BannerTourism\Entities\BannerTourism {
         
         if(!$placeName){
-            throw new Exception('place name is required');
+            throw new \Exception('place name is required');
         }
         
         $bannerUri = $uploadService->upload($bannerName, $bannerPath, \App\Config\Config::getFullUploadDir(), \App\Config\Config::$UPLOAD_IMAGE_ALLWED_EXTENSIONS);
@@ -33,7 +33,7 @@ class Service implements IService{
     public function edit(\App\Models\Upload\Services\IService $uploadService, int $id, string $bannerName, string $bannerPath, string $placeName): \App\Models\BannerTourism\Entities\BannerTourism {
         
         if(!$placeName){
-            throw new Exception('place name is required');
+            throw new \Exception('place name is required');
         }
         
         $bannerUri = $uploadService->upload($bannerName, $bannerPath, \App\Config\Config::getFullUploadDir(), \App\Config\Config::$UPLOAD_IMAGE_ALLWED_EXTENSIONS);

@@ -19,7 +19,7 @@ class AdminController extends \Framework\Controller\Abstracts\BaseControler {
             
             return $contacts;
         } catch (\Exception $e) {
-            echo 'Error on list Contact', $e->getMessage();
+            echo 'Error on list Contact ', $e->getMessage();
         }
         
     }
@@ -36,7 +36,7 @@ class AdminController extends \Framework\Controller\Abstracts\BaseControler {
             $data['page'] = 'FooterContact/Views/Admin/tableView';
             $this->view('Admin/Views/indexView', $data);
         } catch (\Exception $e) {
-            echo 'Error on list Contact', $e->getMessage();
+            echo 'Error on list Contact ', $e->getMessage();
         }
     }
 
@@ -54,7 +54,7 @@ class AdminController extends \Framework\Controller\Abstracts\BaseControler {
             $data['page'] = 'FooterContact/Views/Admin/editFormView';
             $this->view('Admin/Views/indexView', $data);
         } catch (\Exception $e) {
-            echo 'Error on edit Contact', $e->getMessage();
+            echo 'Error on edit Contact ', $e->getMessage();
         }
     }
 

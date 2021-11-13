@@ -1,4 +1,9 @@
 <section class="container">
+    <?php if(isset($message)) {?>
+    <div class="alert alert-danger">
+        <?php echo $message ?>
+    </div>
+    <?php } ?>
 <form method="POST" enctype="multipart/form-data" action="<?php echo \App\Config\Config::url('/admin/banner-tourism-add-save')?>">
     <div class="form-group">
         <label>Imagem</label>

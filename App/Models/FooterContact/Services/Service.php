@@ -18,13 +18,13 @@ class Service implements IService {
     public function edit(int $id, string $address, string $email, string $telephone): \App\Models\FooterContact\Entities\FooterContact {
         
         if(!$address){
-            throw new Exception('address is required');
+            throw new \Exception('address is required');
         }
         if(!$email){
-            throw new Exception('email is required');
+            throw new \Exception('email is required');
         }
         if(!$telephone){
-            throw new Exception('telephone is required');
+            throw new \Exception('telephone is required');
         }
         
         return $this->repository->edit($id, $address, $email, $telephone);
