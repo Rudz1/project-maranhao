@@ -69,11 +69,15 @@ class AdminController extends \Framework\Controller\Abstracts\BaseControler {
 
             $repository = new \App\Models\FooterContact\Repository\Repository(\Framework\DB\Connection::getConnection());
             $service = new \App\Models\FooterContact\Services\Service($repository);
+            $contact = $service->get($id);
             $service->edit($id, $address, $email, $telephone);
 
             header('Location: ' . \App\Config\Config::url('/admin/footer-contact-table'));
         } catch (\Exception $e) {
-            echo 'Error on edit Contact', $e->getMessage();
+            $data['message'] = $e->getMessage();
+            $data['contact'] = $contact;
+            $data['page'] = 'FooterContact/Views/Admin/editFormView';
+            $this->view('Admin/Views/indexView', $data);
         }
     }
 

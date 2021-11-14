@@ -35,14 +35,14 @@
                                             <input id="pass" name="password" type="password" class="input" data-type="password" placeholder="Enter your password"> 
                                         </div>
                                         <div class="group">
-                                            <input id="check" type="checkbox" class="check" checked> 
-                                            <label for="check"><span class="icon"></span> Keep me Signed in</label> 
-                                        </div>
-                                        <div class="group">
                                             <input type="submit" class="button" value="Entrar">
                                         </div>
                                         <div class="hr"></div>
-                                        <div class="foot"> <a href="#">Forgot Password?</a> </div>
+                                        <?php if (isset($message)) { ?>
+                                            <div class="alert alert-danger">
+                                                <?php echo $message ?>
+                                            </div>
+                                        <?php } ?>
                                     </div>
                                 </form> 
                             </div>

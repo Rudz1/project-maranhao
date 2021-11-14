@@ -38,7 +38,8 @@ class Controller extends \Framework\Controller\Abstracts\BaseControler {
                    
             header("Location: ".\App\Config\Config::url('/admin'));        
         } catch (\Exception $e) {
-             echo 'Error on auth to login: ', $e->getMessage();
+             $data['message'] = $e->getMessage();
+             $this->view('Login/Views/loginForm', $data);
         }
         
     }

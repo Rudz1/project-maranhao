@@ -40,12 +40,8 @@ class AdminController extends \Framework\Controller\Abstracts\BaseControler {
             $uploadService = new \App\Models\Upload\Services\Service();
             $service = new \App\Models\BannerTourism\Services\Service($repository);
             $service->add($uploadService, $banner['name'], $banner['tmp_name'], $placeName);
-            $banner = $service->list();
 
-            $data['message'] = 'Banner was added';
-            $data['banners'] = $banner;
-            $data['page'] = 'BannerTourism/Views/Admin/tableView';
-            $this->view('Admin/Views/indexView', $data);
+            header('Location: ' . \App\Config\Config::url('/admin/banner-tourism-table'));
         } catch (\Exception $e) {
             $data['message'] = $e->getMessage();
             $data['page'] = 'BannerTourism/Views/Admin/addFormView';
@@ -82,12 +78,8 @@ class AdminController extends \Framework\Controller\Abstracts\BaseControler {
             $uploadService = new \App\Models\Upload\Services\Service();
             $service = new \App\Models\BannerTourism\Services\Service($repository);
             $service->edit($uploadService, $id, $banner['name'], $banner['tmp_name'], $placeName);
-            $banner = $service->list();
 
-            $data['message'] = 'Banner was edited';
-            $data['banners'] = $banner;
-            $data['page'] = 'BannerTourism/Views/Admin/tableView';
-            $this->view('Admin/Views/indexView', $data);
+            header('Location: ' . \App\Config\Config::url('/admin/banner-tourism-table'));
         } catch (\Exception $e) {
             $data['message'] = $e->getMessage();
             $data['page'] = 'BannerTourism/Views/Admin/addFormView';
@@ -104,12 +96,8 @@ class AdminController extends \Framework\Controller\Abstracts\BaseControler {
             $repository = new \App\Models\BannerTourism\Repositories\Repository(\Framework\DB\Connection::getConnection());
             $service = new \App\Models\BannerTourism\Services\Service($repository);
             $service->delete($id);
-            $banner = $service->list();
 
-            $data['message'] = 'Banner was deleted';
-            $data['banners'] = $banner;
-            $data['page'] = 'BannerTourism/Views/Admin/tableView';
-            $this->view('Admin/Views/indexView', $data);
+            header('Location: ' . \App\Config\Config::url('/admin/banner-tourism-table'));
         } catch (\Exception $e) {
             echo 'Error on edit resource: ', $e->getMessage();
         }
