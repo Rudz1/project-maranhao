@@ -11,6 +11,12 @@
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/home/andre/projetos/maranhao-culture/App/Models/FooterPages/Repositories/Repository.php</file>
+            <file>file:/home/andre/projetos/maranhao-culture/App/Config/Config.php</file>
+            <file>file:/home/andre/projetos/maranhao-culture/App/Models/FooterPages/Controllers/Admin/AdminController.php</file>
+            <file>file:/home/andre/projetos/maranhao-culture/App/Config/Router.php</file>
+            <file>file:/home/andre/projetos/maranhao-culture/App/Models/FooterPages/Services/Service.php</file>
+        </group>
     </open-files>
 </project-private>

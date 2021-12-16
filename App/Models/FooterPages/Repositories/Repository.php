@@ -48,7 +48,7 @@ class Repository implements IRepository {
 
     public function list(int $rowsQuantity = null): array {
 
-        $sql = "SELECT * FROM footer_pages ORDER BY id DESC";
+        $sql = "SELECT * FROM footer_pages ORDER BY id ASC";
         if ($rowsQuantity != null) {
             $sql .= " LIMIT ".$rowsQuantity;
         }
@@ -77,6 +77,20 @@ class Repository implements IRepository {
         }
         
         return $this->get($id);
+    }
+
+    public function delete(int $id): \App\Models\FooterPages\Entities\FooterPages {
+        
+        $id = addslashes($id);
+        $page = $this->get($id);
+        
+        $sql = "DELETE FROM footer_pages WHERE id = ".$id;
+        $this->con->query($sql);
+        if($this->con->error){
+            throw new \Exception($this->con->error);
+        }
+        
+        return $page;
     }
 
 }

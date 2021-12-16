@@ -45,4 +45,10 @@ interface IService {
      */
     public function list(): array;
     
+    /**
+     * 
+     * @return \App\Models\FooterPages\Entities\FooterPages
+     */
+    public function delete(int $id): \App\Models\FooterPages\Entities\FooterPages;
+    
 }

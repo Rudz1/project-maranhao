@@ -48,18 +48,11 @@
 
           <h6 class="text-uppercase font-weight-bold">Paginas</h6>
           <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <?php foreach(\App\Models\FooterPages\Controllers\Admin\AdminController::pages() as $page){ ?>
           <p>
-            <a href="/">Home</a>
+            <a href="<?php echo $page->getLink() ?>"><?php echo $page->getPage() ?></a>
           </p>
-          <p>
-            <a href="<?php echo \App\Config\Config::url('/tourist-hotspots')?>">Pontos Turisticos</a>
-          </p>
-          <p>
-            <a href="><?php echo \App\Config\Config::url('/culture')?>">Cultura</a>
-          </p>
-          <p>
-            <a href="<?php echo  \App\Config\Config::url('/contact')?>">Contato</a>
-          </p>
+          <?php } ?>
 
         </div>
 

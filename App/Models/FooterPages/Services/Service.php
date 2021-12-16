@@ -29,12 +29,12 @@ class Service implements IService {
     }
 
     public function get($id): \App\Models\FooterPages\Entities\FooterPages {
-        return $this->get($id);
+        return $this->repository->get($id);
     }
 
     public function initialize(): bool {
-        $pages = $this->repository->list(1);
-        if (!$pages) {
+
+        if (!$this->repository->list(1)) {
             $this->repository->create('', '');
         }
         return true;
@@ -42,8 +42,7 @@ class Service implements IService {
 
     public function list(): array {
         $this->initialize();
-        $pages = $this->list();
-        return $pages;
+        return $this->repository->list();
     }
 
     public function update(int $id, string $page, string $link): \App\Models\FooterPages\Entities\FooterPages {
@@ -60,7 +59,11 @@ class Service implements IService {
             throw new \Exception('Link is required');
         }
         
-        return $this->update($id, $page, $link);
+        return $this->repository->update($id, $page, $link);
+    }
+
+    public function delete($id): \App\Models\FooterPages\Entities\FooterPages {
+        return $this->repository->delete($id);
     }
 
 }

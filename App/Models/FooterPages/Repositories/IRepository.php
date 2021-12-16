@@ -40,5 +40,12 @@ interface IRepository {
      */
     public function update(int $id, string $page, string $link): \App\Models\FooterPages\Entities\FooterPages;
     
+    /**
+     * 
+     * @param int $id
+     * @return \App\Models\FooterPages\Entities\FooterPages
+     */
+    public function delete(int $id): \App\Models\FooterPages\Entities\FooterPages;
+    
     
 }

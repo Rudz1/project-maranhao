@@ -36,7 +36,7 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav">
                         <li class="nav-item ">
-                            <a class="nav-link" href="/">Home</a>
+                            <a class="nav-link" href="<?php echo \App\Config\Config::url('/')?>">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo \App\Config\Config::url('/tourist-hotspots')?>">Pontos Turisticos</a>
