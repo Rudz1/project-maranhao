@@ -14,7 +14,7 @@ class AdminController extends \Framework\Controller\Abstracts\BaseControler {
         try {
 
             $repository = new \App\Models\CultureContent\Repositories\Repository(\Framework\DB\Connection::getConnection());
-            $contents = $service = new \App\Models\CultureContent\Services\Service($repository);
+            $service = new \App\Models\CultureContent\Services\Service($repository);
             $contents = $service->list();
 
             $data['contents'] = $contents;

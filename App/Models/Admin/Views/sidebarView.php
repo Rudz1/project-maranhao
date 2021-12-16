@@ -49,6 +49,9 @@
                 <li>
                     <a href="<?php echo App\Config\Config::url('/admin/footer-contact-table') ?>">Contact</a>
                 </li>
+                <li>
+                    <a href="<?php echo App\Config\Config::url('/admin/footer-pages-table') ?>">Pages</a>
+                </li>
 
             </ul>
         </li>
